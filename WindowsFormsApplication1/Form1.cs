@@ -27,7 +27,9 @@ namespace WindowsFormsApplication1
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-           
+            t.next();
+            t.update();
+            this.Invalidate();
            
         }
 

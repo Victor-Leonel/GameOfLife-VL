@@ -11,8 +11,8 @@ using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
-
     {
+        public int contador = 0;
         Tablero t;
         public Form1()
         {
@@ -27,15 +27,33 @@ namespace WindowsFormsApplication1
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            t.next();
+           /* t.next();
             t.update();
-            this.Invalidate();
+            this.Invalidate();*/
            
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             t.Dibuja(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            t = new Tablero(10);
+            contador = 0;
+            L_Conta.Text = Convert.ToString(contador);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            t.next();
+            t.update();
+            this.Invalidate();
+            contador = contador + 1;
+            L_Conta.Text = Convert.ToString(contador);
         }
     }
 }

@@ -29,9 +29,9 @@ namespace WindowsFormsApplication1
         {
 
             Graphics g = f.CreateGraphics();
-            g.DrawRectangle(new Pen(Color.Black, 1), x, y, lado, lado);
+            g.DrawRectangle(new Pen(Color.DarkBlue, 1), x, y, lado, lado);
             if (estado_actual == Estado.viva)
-                g.FillRectangle(new SolidBrush(Color.Black),x,y,lado,lado);
+                g.FillRectangle(new SolidBrush(Color.Red),x,y,lado,lado);
 
             
         }
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1
                 List<Celda> temp = new List<Celda>();
                 for (int j = 0; j < tamaño; j++)
                 {
-                    temp.Add(new Celda(20+i*20,20+j*20, r));
+                    temp.Add(new Celda(21+i*21,21+j*21, r));
                 }
                 tablero.Add(temp);
 
